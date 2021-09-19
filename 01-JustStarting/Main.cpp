@@ -27,6 +27,7 @@ int main()
     writeLine(sayHelloTo("World"));
 
     string somethingToSayHello = "";
+    string longestThingHellowed = "";
 
     while (somethingToSayHello != "bye")
     {
@@ -37,5 +38,12 @@ int main()
         cin >> somethingToSayHello;
         writeLine(getSeparator());
         writeLine(sayHelloTo(somethingToSayHello));
+
+        if (longestThingHellowed.length() < somethingToSayHello.length())
+        {
+            longestThingHellowed = somethingToSayHello;
+        }
+        writeLine("Longest thing hellowed so far: " + longestThingHellowed);
+
     }
 }
