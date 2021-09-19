@@ -10,6 +10,10 @@ using std::string;
 #include <vector>
 using std::vector;
 
+#include <algorithm>
+using std::sort;
+
+
 //
 // Constants
 //
@@ -63,13 +67,18 @@ void playWithVectors()
 
         cout << "Write a word: ";
         cin >> someInput;
+        words.push_back(someInput);
         writeSeparator();
 
         writeLine("Current sentence so far:");
-        words.push_back(someInput);
         writeSentence(words);
         writeSeparator();
     }
+
+    sort(begin(words), end(words));
+    writeLine("Finally, the words alphabetically ordered:");
+    writeSentence(words);
+    writeSeparator();
 
     writeEmptyLine();
 }
