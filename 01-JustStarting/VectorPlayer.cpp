@@ -1,3 +1,5 @@
+#include "VectorPlayer.h"
+
 #include <iostream>
 using std::cin;
 using std::cout;
@@ -18,10 +20,16 @@ using std::sort;
 // Constants
 //
 
+//
+// Constructors
+//
+VectorPlayer::VectorPlayer()
+{}
+
 // 
 // Common operations
 //
-string getSentence(vector<string> words)
+string VectorPlayer::GetSentence(vector<string> words)
 {
     string sentence = "";
     for (auto word:words)
@@ -33,10 +41,10 @@ string getSentence(vector<string> words)
 
 // I did this first, then learned a better way with syntactic sugar
 // (see above the getSentence function)
-string getSentence_oldWay(vector<string> words)
+string VectorPlayer::GetSentence_OldWay(vector<string> words)
 {
     string sentence = "";
-    for (int wordPosition = 0; wordPosition < words.size(); wordPosition++)
+    for (size_t wordPosition = 0; wordPosition < words.size(); wordPosition++)
     {
         sentence = sentence + " " + words[wordPosition];
     }
@@ -46,15 +54,15 @@ string getSentence_oldWay(vector<string> words)
 // 
 // Common formatted string writing
 //
-void writeSentence(vector<string> words)
+void VectorPlayer::WriteSentence(vector<string> words)
 {
-    cout << getSentence(words) << endl;
+    cout << GetSentence(words) << endl;
 }
 
 // 
 // Main method
 //
-void playWithVectors()
+void VectorPlayer::Play()
 {
     writeHeader("PLAYING WITH VECTORS!!!");
 
@@ -71,13 +79,13 @@ void playWithVectors()
         writeSeparator();
 
         writeLine("Current sentence so far:");
-        writeSentence(words);
+        WriteSentence(words);
         writeSeparator();
     }
 
     sort(begin(words), end(words));
     writeLine("Finally, the words alphabetically ordered:");
-    writeSentence(words);
+    WriteSentence(words);
     writeSeparator();
 
     writeEmptyLine();
