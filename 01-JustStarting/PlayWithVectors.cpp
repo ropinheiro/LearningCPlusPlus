@@ -20,6 +20,18 @@ using std::vector;
 string getSentence(vector<string> words)
 {
     string sentence = "";
+    for (auto word:words)
+    {
+        sentence = sentence + " " + word;
+    }
+    return sentence;
+}
+
+// I did this first, then learned a better way with syntactic sugar
+// (see above the getSentence function)
+string getSentence_oldWay(vector<string> words)
+{
+    string sentence = "";
     for (int wordPosition = 0; wordPosition < words.size(); wordPosition++)
     {
         sentence = sentence + " " + words[wordPosition];
