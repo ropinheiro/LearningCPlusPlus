@@ -21,9 +21,15 @@
     <ClCompile Include="PlayWithStrings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PlayWithVectors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PlayWithStrings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayWithVectors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

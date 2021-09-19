@@ -7,8 +7,11 @@ using std::endl;
 using std::string;
 
 #include "PlayWithStrings.h"
+#include "PlayWithVectors.h"
 
 int main()
 {
     playWithStrings();
+
+    playWithVectors();
 }
