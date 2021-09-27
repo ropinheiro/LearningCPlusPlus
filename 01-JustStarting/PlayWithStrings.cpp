@@ -9,7 +9,7 @@ using std::string;
 //
 // Constants
 //
-int SEPARATOR_LENGTH = 75;
+size_t SEPARATOR_LENGTH = 75;
 char NORMAL_SEPARATOR_CHAR = '-';
 char HEADER_SEPARATOR_CHAR = '=';
 
@@ -27,10 +27,10 @@ string sayHelloTo(string somethingToSayHello)
 
 string getHeaderText(string text)
 {
-    int remainingLength = HEADER_SEPARATOR.length() - text.length();
+    size_t remainingLength = HEADER_SEPARATOR.length() - text.length();
 
-    int leftPartLength = remainingLength / 2;
-    int rightPartLength = remainingLength - leftPartLength;
+    size_t leftPartLength = remainingLength / 2;
+    size_t rightPartLength = remainingLength - leftPartLength;
 
     string leftPart = string(leftPartLength - 1, HEADER_SEPARATOR_CHAR);
     string rightPart = string(rightPartLength - 1, HEADER_SEPARATOR_CHAR);
