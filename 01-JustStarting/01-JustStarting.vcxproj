@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PlayWithStrings.h" />
+    <ClInclude Include="TemplateClass.h" />
     <ClInclude Include="TemplatePlayer.h" />
     <ClInclude Include="TypeNamePlayer.h" />
     <ClInclude Include="VectorPlayer.h" />

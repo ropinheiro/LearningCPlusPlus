@@ -1,4 +1,5 @@
 #include "TemplatePlayer.h"
+#include "TemplateClass.h"
 
 #include <string>
 using std::string;
@@ -47,6 +48,21 @@ void TemplatePlayer::Play()
     bool x = true;
     bool y = false;
     cout << "Max of bools x=true and y=false is: " << GetMax(x, y) << endl;
+
+    writeSeparator();
+    writeHeader("... and now using template class!!!");
+
+    TemplateClass<int> templateClassForInt;
+    cout << "Max of ints i=1 and j=2 is: "
+        << templateClassForInt.GetMin(i, j) << endl;
+
+    TemplateClass<string> templateClassForString;
+    cout << "Max of strings m=abc and n=def is: "
+        << templateClassForString.GetMin(m, n) << endl;
+
+    TemplateClass<bool> templateClassForBool;
+    cout << "Max of bools x=true and y=false is: "
+        << templateClassForBool.GetMin(x, y) << endl;
 
     writeSeparator();
     writeEmptyLine();
