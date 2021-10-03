@@ -5,6 +5,7 @@ using std::endl;
 
 #include <string>
 using std::string;
+using std::string_view;
 
 //
 // Constants
@@ -25,7 +26,7 @@ string sayHelloTo(string somethingToSayHello)
     return "Hello, " + somethingToSayHello + "!";
 }
 
-string getHeaderText(string text)
+string getHeaderText(string_view text)
 {
     size_t remainingLength = HEADER_SEPARATOR.length() - text.length();
 
@@ -35,13 +36,17 @@ string getHeaderText(string text)
     string leftPart = string(leftPartLength - 1, HEADER_SEPARATOR_CHAR);
     string rightPart = string(rightPartLength - 1, HEADER_SEPARATOR_CHAR);
 
-    return leftPart + ' ' + text + ' ' + rightPart;
+    // We have to use std::string::output because string_view still do not
+    // work with the +operator overload, at least in C++ 17.
+    std::string output;
+    output.append(leftPart).append(" ").append(text).append(" ").append(rightPart);
+    return output;
 }
 
 // 
 // Common formatted string writing
 //
-void writeLine(string text)
+void writeLine(string_view text)
 {
     cout << text << endl;
 }
@@ -51,7 +56,7 @@ void writeEmptyLine()
     cout << endl;
 }
 
-void writeHeader(string text)
+void writeHeader(string_view text)
 {
     writeLine(HEADER_SEPARATOR);
     writeLine(getHeaderText(text));
