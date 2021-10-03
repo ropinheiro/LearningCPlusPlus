@@ -7,10 +7,14 @@ using std::endl;
 using std::string;
 
 #include "PlayWithStrings.h"
+#include "TypeNamePlayer.h"
 #include "VectorPlayer.h"
 
 int main()
 {
+    TypeNamePlayer typeNamePlayer;
+    typeNamePlayer.Play();
+
     playWithStrings();
 
     // This already instantiates with default constructor!

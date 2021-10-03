@@ -24,12 +24,18 @@
     <ClCompile Include="VectorPlayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TypeNamePlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PlayWithStrings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VectorPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeNamePlayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
