@@ -1,6 +1,7 @@
 #include "PlayWithStrings.h"
 #include "TypeNamePlayer.h"
 #include "VectorPlayer.h"
+#include "TemplatePlayer.h"
 
 int main()
 {
@@ -13,4 +14,7 @@ int main()
     // Not like C# or Java, where you have to do "new (...)".
     VectorPlayer vectorPlayer;
     vectorPlayer.Play();
+
+    TemplatePlayer templatePlayer;
+    templatePlayer.Play();
 }
