@@ -1,11 +1,3 @@
-#include <iostream>
-using std::cin;
-using std::cout;
-using std::endl;
-
-#include <string>
-using std::string;
-
 #include "PlayWithStrings.h"
 #include "TypeNamePlayer.h"
 #include "VectorPlayer.h"

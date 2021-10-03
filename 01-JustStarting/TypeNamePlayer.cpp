@@ -2,13 +2,9 @@
 
 #include "TypeNamePlayer.h"
 
-#include <iostream>
-using std::cin;
-using std::cout;
-using std::endl;
-
 #include <string>
 using std::string;
+using std::string_view;
 #include "PlayWithStrings.h"
 
 //
@@ -26,9 +22,7 @@ TypeNamePlayer::TypeNamePlayer()
 //
 // Credits: https://stackoverflow.com/a/20170989
 template <class T>
-constexpr
-std::string_view
-TypeNamePlayer::GetTypeName()
+constexpr string_view TypeNamePlayer::GetTypeName()
 {
     using namespace std;
 #ifdef __clang__

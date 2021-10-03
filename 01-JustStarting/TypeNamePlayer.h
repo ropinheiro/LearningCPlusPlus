@@ -1,19 +1,13 @@
 #pragma once
 
-#include <iostream>
-using std::cin;
-using std::cout;
-using std::endl;
-
 #include <string>
-using std::string;
-#include "PlayWithStrings.h"
+using std::string_view;
 
 class TypeNamePlayer
 {
 private:
     template <class T>
-    constexpr std::string_view GetTypeName();
+    constexpr string_view GetTypeName();
 
 public:
     TypeNamePlayer();
