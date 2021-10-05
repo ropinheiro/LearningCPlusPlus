@@ -1,3 +1,4 @@
+#include "MemoryPlayer.h"
 #include "PlayWithStrings.h"
 #include "PointerPlayer.h"
 #include "TemplatePlayer.h"
@@ -10,6 +11,9 @@ int main()
     // Not like C# or Java, where you have to do "new (...)".
     TypeNamePlayer typeNamePlayer;
     typeNamePlayer.Play();
+
+    MemoryPlayer memoryPlayer;
+    memoryPlayer.Play();
 
     playWithStrings();
 
