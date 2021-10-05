@@ -23,8 +23,18 @@ PointerPlayer::PointerPlayer()
 // 
 // Common operations
 //
-string PointerPlayer::Obfuscate(string text)
+
+// In this example, we use const& to be sure that this function
+// won't change the contents of the text variable passed by reference.
+string PointerPlayer::Obfuscate(string const& text)
 {
+    // Because we used const& text, we cannot do the following
+    // two lines, as reverse changes the string's contents.
+
+    // std::reverse(text.begin(), text.end());
+    // return text;
+
+    // Therefore, we have to do a copy first:
     std::string copy(text);
     std::reverse(copy.begin(), copy.end());
     return copy;

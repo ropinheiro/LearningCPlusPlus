@@ -10,5 +10,5 @@ private:
 public:
     PointerPlayer();
     void Play();
-    string Obfuscate(string text);
+    string Obfuscate(string const& text);
 };
