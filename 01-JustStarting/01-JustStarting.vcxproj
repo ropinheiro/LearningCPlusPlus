@@ -143,12 +143,14 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PlayWithStrings.cpp" />
+    <ClCompile Include="PointerPlayer.cpp" />
     <ClCompile Include="TemplatePlayer.cpp" />
     <ClCompile Include="TypeNamePlayer.cpp" />
     <ClCompile Include="VectorPlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PlayWithStrings.h" />
+    <ClInclude Include="PointerPlayer.h" />
     <ClInclude Include="TemplateClass.h" />
     <ClInclude Include="TemplatePlayer.h" />
     <ClInclude Include="TypeNamePlayer.h" />
