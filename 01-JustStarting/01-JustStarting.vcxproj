@@ -145,6 +145,7 @@
     <ClCompile Include="MemoryPlayer.cpp" />
     <ClCompile Include="PlayWithStrings.cpp" />
     <ClCompile Include="PointerPlayer.cpp" />
+    <ClCompile Include="SharedPointerPlayer.cpp" />
     <ClCompile Include="TemplatePlayer.cpp" />
     <ClCompile Include="TypeNamePlayer.cpp" />
     <ClCompile Include="VectorPlayer.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="MemoryPlayer.h" />
     <ClInclude Include="PlayWithStrings.h" />
     <ClInclude Include="PointerPlayer.h" />
+    <ClInclude Include="SharedPointerPlayer.h" />
     <ClInclude Include="TemplateClass.h" />
     <ClInclude Include="TemplatePlayer.h" />
     <ClInclude Include="TypeNamePlayer.h" />
